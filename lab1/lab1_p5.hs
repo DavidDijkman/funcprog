@@ -1,5 +1,5 @@
 
-collatzSteps :: Int -> Int
+collatzSteps :: Integer -> Integer
 
 collatzSteps n = c n n 0
     where
@@ -20,9 +20,10 @@ nthCollatzRecord n = g n 1 0 0
         r: collatz record up to a
         m: counts amount of records
         -}
+        --g :: Int -> Integer -> Integer -> Integer  -> Integer
         g n a r m 
             | n == 0 = 0
-            | k > r && m+1 == n = toInteger a
+            | k > r && m+1 == n = a
             | k > r = g n (a+1) k (m+1) 
             | otherwise = g n (a+1) r m
                 where k = collatzSteps a
