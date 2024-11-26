@@ -1,5 +1,6 @@
 
 intervalSums :: Int -> Int
+intervalSums 1 = 0
 
 intervalSums n = g n (n `div` 2) (n `div` 2 + 1) (2* (n `div` 2) + 1) 0
     {-
