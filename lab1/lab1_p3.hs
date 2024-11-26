@@ -1,6 +1,4 @@
-{-
-Not fast enough, 
--}
+
 
 powMod :: Int -> Int -> Int -> Int
 
